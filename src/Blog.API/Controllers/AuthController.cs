@@ -3,6 +3,7 @@ using Blog.API.Services;
 using Blog.API.ViewModels;
 using Blog.Data.Abstract;
 using Blog.Model.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blog.API.Controllers
@@ -56,7 +57,7 @@ namespace Blog.API.Controllers
                 Id = id,
                 Username = data.Username,
                 Email = data.Email,
-                Password = data.Password
+                Password = _authService.HashPassword(data.Password)
             };
 
             _userRepository.Add(user);

@@ -92,7 +92,7 @@ namespace Blog.API
                 .AllowCredentials()
             );
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseAuthentication();
 
