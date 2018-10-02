@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using Blog.Model.Interfaces;
 
-namespace Blog.Data
+namespace Blog.Data.Abstract
 {
     public interface IEntityBaseRepository<T> where T : class, IEntityBase, new()
     {

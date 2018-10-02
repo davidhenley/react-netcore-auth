@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Blog.Data.Abstract;
 using Blog.Model.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace Blog.Data
+namespace Blog.Data.Repositories
 {
     public class EntityBaseRepository<T> : IEntityBaseRepository<T>
         where T : class, IEntityBase, new()
